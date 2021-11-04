@@ -83,14 +83,22 @@ header #open {
 
 header #open .hamb1 {
   top: 5px;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-animation: hamb1-anim .5s ease-in-out backwards;
+          animation: hamb1-anim .5s ease-in-out backwards;
 }
 
 header #open .hamb2 {
   top: 12px;
+  -webkit-animation: hamb2-anim .5s ease-in-out forwards;
+          animation: hamb2-anim .5s ease-in-out forwards;
 }
 
 header #open .hamb3 {
   top: 20px;
+  -webkit-animation: hamb3-anim .5s ease-in-out forwards;
+          animation: hamb3-anim .5s ease-in-out forwards;
 }
 
 header #close {
@@ -103,12 +111,16 @@ header #close .hamb1 {
   top: 50%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-animation: hamb1-close-anim .5s ease-in-out forwards;
+          animation: hamb1-close-anim .5s ease-in-out forwards;
 }
 
 header #close .hamb2 {
   top: 50%;
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
+  -webkit-animation: hamb2-close-anim .5s ease-in-out forwards;
+          animation: hamb2-close-anim .5s ease-in-out forwards;
 }
 
 .sidebar {
@@ -169,6 +181,112 @@ header #close .hamb2 {
   padding: 40px 20px;
   border: 1px dashed #f1f1f1;
   color: #f1f1f1;
+}
+
+@-webkit-keyframes hamb1-anim {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes hamb1-anim {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes hamb2-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hamb2-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hamb3-anim {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes hamb3-anim {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes hamb1-close-anim {
+  from {
+    top: 0%;
+    right: -50%;
+  }
+  to {
+    top: 50%;
+    right: 0;
+  }
+}
+
+@keyframes hamb1-close-anim {
+  from {
+    top: 0%;
+    right: -50%;
+  }
+  to {
+    top: 50%;
+    right: 0;
+  }
+}
+
+@-webkit-keyframes hamb2-close-anim {
+  from {
+    top: 0%;
+    left: -50%;
+  }
+  to {
+    top: 50%;
+    left: 0;
+  }
+}
+
+@keyframes hamb2-close-anim {
+  from {
+    top: 0%;
+    left: -50%;
+  }
+  to {
+    top: 50%;
+    left: 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
