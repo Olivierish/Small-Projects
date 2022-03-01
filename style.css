@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -14,6 +16,18 @@ body {
 main {
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu {
@@ -77,50 +91,50 @@ header .logo {
 
 header #open {
   display: block;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 header #open .hamb1 {
   top: 5px;
   -webkit-transform: rotate(0);
           transform: rotate(0);
-  -webkit-animation: hamb1-anim .5s ease-in-out backwards;
-          animation: hamb1-anim .5s ease-in-out backwards;
+  -webkit-animation: hamb1-anim 0.5s ease-in-out backwards;
+          animation: hamb1-anim 0.5s ease-in-out backwards;
 }
 
 header #open .hamb2 {
   top: 12px;
-  -webkit-animation: hamb2-anim .5s ease-in-out forwards;
-          animation: hamb2-anim .5s ease-in-out forwards;
+  -webkit-animation: hamb2-anim 0.5s ease-in-out forwards;
+          animation: hamb2-anim 0.5s ease-in-out forwards;
 }
 
 header #open .hamb3 {
   top: 20px;
-  -webkit-animation: hamb3-anim .5s ease-in-out forwards;
-          animation: hamb3-anim .5s ease-in-out forwards;
+  -webkit-animation: hamb3-anim 0.5s ease-in-out forwards;
+          animation: hamb3-anim 0.5s ease-in-out forwards;
 }
 
 header #close {
   display: none;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 header #close .hamb1 {
   top: 50%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-animation: hamb1-close-anim .5s ease-in-out forwards;
-          animation: hamb1-close-anim .5s ease-in-out forwards;
+  -webkit-animation: hamb1-close-anim 0.5s ease-in-out forwards;
+          animation: hamb1-close-anim 0.5s ease-in-out forwards;
 }
 
 header #close .hamb2 {
   top: 50%;
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
-  -webkit-animation: hamb2-close-anim .5s ease-in-out forwards;
-          animation: hamb2-close-anim .5s ease-in-out forwards;
+  -webkit-animation: hamb2-close-anim 0.5s ease-in-out forwards;
+          animation: hamb2-close-anim 0.5s ease-in-out forwards;
 }
 
 .sidebar {
